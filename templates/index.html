@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSA Encryption/Decryption</title>
+</head>
+<body>
+    <h1>RSA Encryption/Decryption</h1>
+    <form method="POST">
+        <label for="p">Enter a prime number (p):</label>
+        <input type="text" name="p" required><br>
+
+        <label for="q">Enter another prime number (q):</label>
+        <input type="text" name="q" required><br>
+
+        <label for="e">Enter an encryption key (e):</label>
+        <input type="text" name="e" required><br>
+
+        <label for="message">Enter the message to encrypt:</label>
+        <textarea name="message" required></textarea><br>
+
+        <input type="submit" value="Encrypt/Decrypt">
+    </form>
+
+    {% if encrypted_message and decrypted_message %}
+    <h2>Encrypted Message:</h2>
+    <p>{{ encrypted_message }}</p>
+
+    <h2>Decrypted Message:</h2>
+    <p>{{ decrypted_message }}</p>
+    {% endif %}
+</body>
+</html>
